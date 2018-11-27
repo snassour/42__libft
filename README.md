@@ -6,8 +6,8 @@ Allowed functions : write, malloc, free.
 
 ## Usage
 compile : <code>make</code> <br/>
-linker : <code>-lft<code> 
-	
+linker : <code>-lft<code>
+
 ## Skills
 Imperative programming  <br/>
 Rigor  <br/>
