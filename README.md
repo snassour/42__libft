@@ -10,5 +10,5 @@ linker : <code>-lft<code>
 Imperative programming  <br/>
 Rigor  <br/>
 Algorithms & AI
-## Link to subject
+## Link to pdf
 https://github.com/snassour/42__libft/blob/master/libft.fr.pdf
