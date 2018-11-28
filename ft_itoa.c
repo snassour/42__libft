@@ -12,39 +12,19 @@
 
 #include "libft.h"
 
-static int	ft_count_len(int value)
+char	*ft_itoa(int nb)
 {
-	int len;
+	int		i[2];
+	char	*s;
 
-	len = 1;
-	if (value < 0)
-		value = -value + (len++ * 0);
-	while (value >= 10)
-		value = value / 10 + (len++ * 0);
-	return (len);
-}
-
-char		*ft_itoa(int n)
-{
-	char	*dest;
-	int		i;
-
-	dest = NULL;
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
-	i = ft_count_len(n);
-	dest = ft_strnew(i);
-	if (dest == NULL)
-		return (NULL);
-	if (n < 0)
-	{
-		n = -n;
-		dest[0] = '-';
-	}
-	while (i >= 0 && dest[--i] != '-')
-	{
-		dest[i] = (n % 10) + '0';
-		n /= 10;
-	}
-	return (dest);
+	if (nb == -2147483648 || !(s = (char *)ft_memalloc(sizeof(char) * 12)))
+		return (nb == -2147483648 ? ft_strdup("-2147483648") : NULL);
+	i[0] = (nb < 0);
+	i[1] = nb;
+	s[0] = (nb >= 0 ? '0' * (nb == 0) : '-');
+	while (i[1])
+		i[1] /= 10 + (0 * ++(i[0]));
+	while (--(i[0]) >= !!s[0] && (s[i[0]] = '0' + (nb < 0 ? -nb : nb) % 10))
+		nb /= 10;
+	return (s);
 }
