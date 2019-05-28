@@ -74,7 +74,8 @@ SRC_NAME = 	ft_atoi.c\
 			ft_lstpushback.c\
 			ft_isblank.c\
 			ft_count_tab_elem.c\
-			ft_strblankrm.c
+			ft_strblankrm.c\
+			ft_putseparation.c
 
 OBJ_PATH = ./obj/
 

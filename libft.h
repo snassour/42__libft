@@ -97,4 +97,9 @@ void				ft_lstpushback(t_list *begin, void *content,
 int					ft_isblank(int c);
 char				*ft_strblankrm(char const *s);
 
+/*
+** fonction add par léon le bg
+*/
+
+void				ft_putseparation(void);
 #endif
